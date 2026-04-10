@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="container-card">
+        <div class="card day">
+          <label for="day"><span>DAY</span></label>
+          <input
+            class="input-day"
+            type="text"
+            id="day"
+            placeholder="DD"
+            maxlength="2"
+          />
+          <p class="text-error-day">This field is required</p>
+        </div>
+
+        <div class="card month">
+          <label for="month"><span>MONTH</span></label>
+          <input
+            class="input-month"
+            type="text"
+            id="month"
+            placeholder="MM"
+            maxlength="2"
+          />
+          <p class="text-error-month">This field is required</p>
+        </div>
+
+        <div class="card year">
+          <label for="year"><span>YEAR</span></label>
+          <input
+            class="input-year"
+            type="text"
+            id="year"
+            placeholder="YYYY"
+            maxlength="4"
+          />
+          <p class="text-error-year">This field is required</p>
+        </div>
+      </div>
+      <div class="card-submit">
+        <hr class="hr" />
+        <button class="btn">
+          <img
+            class="icon-img"
+            src="./assets/images/icon-arrow.svg"
+            alt="icon"
+          />
+        </button>
+      </div>
+
+      <div class="card-result">
+        <ul class="ul-result">
+          <li class="years"><span class="span-year">--</span>years</li>
+          <li class="months"><span class="span-month">--</span>months</li>
+          <li class="days"><span class="span-day">--</span>days</li>
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

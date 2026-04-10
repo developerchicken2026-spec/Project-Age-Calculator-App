@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap");
+
+:root {
+  /* Primary */
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  /* Neutral */
+  --white: hsl(0, 100%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%); /* Tao chỉnh đen nhẹ cho sang */
+
+  /* Typography */
+  --font-main: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 375px;
+  background-color: var(--white);
+  margin: 0 1rem;
+  border-radius: 1rem 1rem 8rem 1rem;
+  padding: 3rem 1rem;
+}
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+}
+
+input {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 0.35rem;
+  border: 1px solid var(--light-grey);
+  margin-top: 0.2rem;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: var(--font-main);
+  color: var(--off-black);
+  text-transform: uppercase;
+}
+
+label span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--smokey-grey);
+}
+
+.text-error-day,
+.text-error-month,
+.text-error-year {
+  display: none;
+  font-size: 0.5rem;
+  margin-top: 0.35rem;
+  color: var(--light-red);
+}
+
+.border-active {
+  border: 1px solid var(--light-red);
+}
+
+.card-submit {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-submit::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: gainsboro;
+  z-index: 1;
+}
+
+button {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: var(--purple);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+button:hover img {
+  filter: invert(46%) sepia(97%) saturate(3015%) hue-rotate(237deg)
+    brightness(101%) contrast(101%);
+}
+
+.icon-img {
+  width: 100%;
+  width: 25px;
+  height: auto;
+}
+
+.card-result {
+  margin-top: 2rem;
+  line-height: 3.2rem;
+}
+
+.ul-result {
+  list-style: none;
+}
+
+.ul-result span {
+  font-size: 3.2rem;
+  margin-right: 0.5rem;
+  color: var(--purple);
+}
+
+.ul-result li {
+  font-size: 3.2rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@media (min-width: 728px) {
+  .container {
+    max-width: 1440px;
+    width: 600px;
+    padding: 3rem;
+  }
+
+  p {
+    display: flex;
+    font-size: 0.7rem;
+    margin-top: 0.35rem;
+    color: var(--light-red);
+  }
+
+  .container-card {
+    width: 80%;
+  }
+
+  .card-submit {
+    justify-content: flex-end;
+  }
+
+  input {
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--font-main);
+    color: var(--smokey-grey);
+  }
+
+  input::placeholder {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .card-result {
+    line-height: 4.3rem;
+  }
+
+  .card-result li {
+    font-size: 4rem;
+  }
+
+  label span {
+    font-size: 1rem;
+  }
+
+  .card-result span {
+    letter-spacing: 0.2rem;
+  }
+}
